@@ -46,6 +46,7 @@ public:
     QPushButton *zoomOutButton;
     QPushButton *focusAddButton;
     QPushButton *focusDecButton;
+    QPushButton *captureButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -109,6 +110,9 @@ public:
         focusDecButton = new QPushButton(centralWidget);
         focusDecButton->setObjectName(QStringLiteral("focusDecButton"));
         focusDecButton->setGeometry(QRect(160, 200, 85, 27));
+        captureButton = new QPushButton(centralWidget);
+        captureButton->setObjectName(QStringLiteral("captureButton"));
+        captureButton->setGeometry(QRect(390, 120, 85, 27));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -146,6 +150,7 @@ public:
         zoomOutButton->setText(QApplication::translate("MainWindow", "ZOOM OUT", 0));
         focusAddButton->setText(QApplication::translate("MainWindow", "FOCUS ADD", 0));
         focusDecButton->setText(QApplication::translate("MainWindow", "FOCUS DEC", 0));
+        captureButton->setText(QApplication::translate("MainWindow", "CAPTURE", 0));
     } // retranslateUi
 
 };

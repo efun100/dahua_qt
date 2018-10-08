@@ -6,6 +6,8 @@
 using namespace std;
 extern LLONG lLoginHandle;
 
+extern bool captureFlag;
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -43,13 +45,13 @@ void MainWindow::on_left_button_released()
 void MainWindow::on_up_button_pressed()
 {
     cout << __func__ << endl;
-    CLIENT_DHPTZControlEx2(lLoginHandle, 0, DH_PTZ_RIGHT_CONTROL, 2, 2, 2, false);
+    CLIENT_DHPTZControlEx2(lLoginHandle, 0, DH_PTZ_UP_CONTROL, 2, 2, 2, false);
 }
 
 void MainWindow::on_up_button_released()
 {
     cout << __func__ << endl;
-    CLIENT_DHPTZControlEx2(lLoginHandle, 0, DH_PTZ_RIGHT_CONTROL, 2, 2, 2, true);
+    CLIENT_DHPTZControlEx2(lLoginHandle, 0, DH_PTZ_UP_CONTROL, 2, 2, 2, true);
 }
 
 void MainWindow::on_downButton_pressed()
@@ -122,4 +124,10 @@ void MainWindow::on_focusDecButton_released()
 {
     cout << __func__ << endl;
     CLIENT_DHPTZControlEx2(lLoginHandle, 0, DH_PTZ_FOCUS_DEC_CONTROL, 2, 2, 2, true);
+}
+
+void MainWindow::on_captureButton_clicked()
+{
+    cout << __func__ << endl;
+    captureFlag = true;
 }

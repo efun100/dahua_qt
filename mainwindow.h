@@ -50,6 +50,8 @@ private slots:
 
     void on_focusDecButton_released();
 
+    void on_captureButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

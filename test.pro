@@ -14,7 +14,7 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-        dahuaplay.cpp
+	dahuaplay.cpp
 
 HEADERS  += mainwindow.h \
     ui_mainwindow.h

@@ -106,7 +106,7 @@ void init_models()
 	// faceModels1 = getAFR_FSDK_FACEMODELFromMat(model);
 
 	DIR *dfd;
-	char *pathname = "../models";
+	char *pathname = "./models";
 	char name[MAX_PATH];
 	struct dirent *dp;
 	if ((dfd = opendir(pathname)) == NULL) {
